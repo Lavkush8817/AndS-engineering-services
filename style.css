@@ -13,6 +13,7 @@ Users/lavkushkumardubey/HTML TUTORIAL/invoice2/style.css */ body {
   margin: 0 auto;
   position: relative;
   background-color: transparent;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -462,4 +463,225 @@ h2 {
   height: 100%;
   box-sizing: border-box;
   resize: none;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .invoice-container {
+    padding: 2px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    flex-direction: column;
+    padding-bottom: 5px;
+    align-items: center;
+  }
+  
+  #logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 10px auto;
+    max-height: 60px;
+    width: auto;
+  }
+  
+  .company-info {
+    padding: 0 5px;
+    text-align: center;
+    margin-right: 0;
+  }
+  
+  .company-info h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-right: 0;
+  }
+  
+  .company-info p {
+    font-size: 12px;
+    margin: 2px;
+  }
+  
+  .quotation-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quotation-table {
+    font-size: 12px;
+    table-layout: fixed;
+    word-wrap: break-word;
+  }
+  
+  .quotation-table th,
+  .quotation-table td {
+    padding: 4px;
+  }
+  
+  /* Make the table responsive */
+  .quotation-table th:nth-child(3),
+  .quotation-table td:nth-child(3) {
+    display: none; /* Hide HSN CODE column on mobile */
+  }
+  
+  .quotation-table th:nth-child(1),
+  .quotation-table td:nth-child(1) {
+    width: 40px; /* Sr. No. column */
+  }
+  
+  .quotation-table th:nth-child(2),
+  .quotation-table td:nth-child(2) {
+    width: auto; /* Description column takes remaining space */
+  }
+  
+  #qty, #unitPrice, 
+  .quotation-table th:nth-child(4),
+  .quotation-table th:nth-child(5),
+  .quotation-table td:nth-child(4),
+  .quotation-table td:nth-child(5) {
+    width: 50px; /* Make quantity and price columns narrower */
+  }
+  
+  .quotation-table th:nth-child(6),
+  .quotation-table td:nth-child(6) {
+    width: 60px; /* Amount column */
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    gap: 5px;
+  }
+  
+  #btns {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 200px;
+    padding: 8px 5px;
+  }
+  
+  .totals {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .warranty, .amounts {
+    width: 100%;
+  }
+  
+  #Warranty {
+    width: 100%;
+    min-height: 60px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+  
+  .amounts {
+    margin-top: 10px;
+    text-align: right;
+    border-width: 1px 0 0 0;
+    padding-top: 10px;
+  }
+  
+  .amounts p {
+    margin: 5px 0;
+    font-size: 12px;
+  }
+  
+  #sub, #subTotal, #grandTotal {
+    font-size: 14px;
+  }
+  
+  .signature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .signature, #gst_no {
+    text-align: center;
+    width: 100%;
+  }
+  
+  #singh {
+    height: 40px;
+    width: 120px;
+  }
+  
+  .footer {
+    flex-direction: column;
+  }
+  
+  #Termscoditons {
+    padding-left: 20px;
+  }
+  
+  #Termscoditons li {
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
+  
+  .centered-footer {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  #customer-info {
+    height: auto;
+    min-height: 60px;
+    font-size: 12px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="date"],
+  input[type="text"],
+  input[type="number"] {
+    font-size: 12px;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+  
+  .GST {
+    width: 30px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 480px) {
+  .company-info h1 {
+    font-size: 18px;
+  }
+  
+  .company-info p {
+    font-size: 10px;
+  }
+  
+  .quotation-table {
+    font-size: 10px;
+  }
+  
+  .quotation-table th,
+  .quotation-table td {
+    padding: 2px;
+  }
+  
+  #logo {
+    max-height: 40px;
+  }
+  
+  #btns {
+    font-size: 12px;
+    padding: 6px 3px;
+  }
 }
